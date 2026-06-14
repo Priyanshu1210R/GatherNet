@@ -1,8 +1,7 @@
-let IS_PROD = true;
-const server = IS_PROD ?
-    "https://gathernet-backend.onrender.com" :
+let IS_PROD = false;  // ← Change to false
 
-    "http://localhost:8000"
-
+const server = IS_PROD
+    ? "https://gathernet-backend.onrender.com"
+    : "http://localhost:8000"  // ← Now uses your local backend
 
 export default server;
