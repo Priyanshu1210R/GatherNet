@@ -8,7 +8,6 @@ const userScheme = new Schema(
         token: { type: String }
     }
 )
-
 const User = mongoose.model("User", userScheme);
 
 export { User };
