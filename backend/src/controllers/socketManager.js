@@ -22,10 +22,13 @@ export const connectToSocket = (server) => {
             connections[path].push(socket.id)
 
             timeOnline[socket.id] = new Date();
-
-            for (let a = 0; a < connections[path].length; a++) {
-                io.to(connections[path][a]).emit("user-joined", socket.id)
-            }
+         for (let a = 0; a < connections[path].length; a++) {
+              io.to(connections[path][a]).emit(
+              "user-joined",
+               socket.id,
+               connections[path]
+              );
+          }
 
             if (messages[path] !== undefined) {
                 messages[path].forEach((msg) => {
