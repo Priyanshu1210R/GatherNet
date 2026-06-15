@@ -38,33 +38,42 @@ const login = async (req, res) => {
 
 
 const register = async (req, res) => {
+
     const { name, username, password } = req.body;
 
-
     try {
+
         const existingUser = await User.findOne({ username });
+
         if (existingUser) {
-            return res.status(httpStatus.FOUND).json({ message: "User already exists" });
+            return res.status(409).json({
+                message: "User already exists"
+            });
         }
 
         const hashedPassword = await bcrypt.hash(password, 10);
 
         const newUser = new User({
-            name: name,
-            username: username,
+            name,
+            username,
             password: hashedPassword
         });
 
         await newUser.save();
 
-        res.status(httpStatus.CREATED).json({ message: "User Registered" })
+        return res.status(201).json({
+            message: "User Registered"
+        });
 
     } catch (e) {
-        res.json({ message: `Something went wrong ${e}` })
+
+        console.log(e);
+
+        return res.status(500).json({
+            message: e.message
+        });
     }
-
 }
-
 
 const getUserHistory = async (req, res) => {
     const { token } = req.query;
