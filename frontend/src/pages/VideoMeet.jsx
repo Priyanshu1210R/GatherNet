@@ -64,11 +64,10 @@ export default function VideoMeetComponent() {
 
     // }
 
-    useEffect(() => {
-        console.log("HELLO")
-        getPermissions();
-
-    })
+  useEffect(() => {
+    console.log("HELLO")
+    getPermissions();
+}, [])
 
     let getDislayMedia = () => {
         if (screen) {
@@ -289,7 +288,17 @@ export default function VideoMeetComponent() {
             })
 
             socketRef.current.on('user-joined', (id, clients) => {
-                clients.forEach((socketListId) => {
+
+    console.log("USER JOINED");
+    console.log("id:", id);
+    console.log("clients:", clients);
+
+    if (!clients) {
+        console.log("clients is undefined");
+        return;
+    }
+
+    clients.forEach((socketListId) => {
 
                     connections[socketListId] = new RTCPeerConnection(peerConfigConnections)
                     // Wait for their ice candidate       
