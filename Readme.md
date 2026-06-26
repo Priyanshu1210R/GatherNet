@@ -239,3 +239,11 @@ Contributions are welcome! To get started:
 ---
 
 > **GatherNet** — *Cover a distance, connect with your loved ones.*
+
+---
+
+## 🌐 Live Demo
+
+The application is deployed and accessible at:
+
+**👉 [https://gathernet-frontend.onrender.com](https://gathernet-frontend.onrender.com)**
