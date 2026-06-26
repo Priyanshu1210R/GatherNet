@@ -7,19 +7,19 @@ A real-time video conferencing web application that enables seamless peer-to-pee
 ## Screenshots
 
 ### 🏠 Landing Page
-![Landing Page](Screenshots/Img1.png)
+![Landing Page](Screen%20Shorts/Img1.png)
 
 ### 🔐 Authentication — Register / Sign In
-![Authentication](Screenshots/Img2.png)
+![Authentication](Screen%20Shorts/Img2.png)
 
 ### 🏡 Home Dashboard — Join a Meeting
-![Home Dashboard](Screenshots/Img3.png)
+![Home Dashboard](Screen%20Shorts/Img3.png)
 
 ### 📹 Video Call Room
-![Video Call](Screenshots/Img4.png)
+![Video Call](Screen%20Shorts/Img4.png)
 
 ### 💬 In-call Chat Panel
-![Chat Panel](Screenshots/Img5.png)
+![Chat Panel](Screen%20Shorts/Img5.png)
 
 ---
 
